@@ -17,16 +17,16 @@ class HomeViewModel(private val repository: Repository): ViewModel() {
     @NativeCoroutinesState
     val example: StateFlow<String> = _example
 
-    private val _character = MutableStateFlow<List<CharacterModel>>( viewModelScope, emptyList())
+    private val _characters = MutableStateFlow<List<CharacterModel>>( viewModelScope, emptyList())
     @NativeCoroutinesState
-    val character: StateFlow<List<CharacterModel>> = _character
+    val characters: StateFlow<List<CharacterModel>> = _characters
 
     init {
         viewModelScope.launch {
             val response = withContext(Dispatchers.IO) {
                 repository.getCharacters()
             }
-            _character.update { response }
+            _characters.update { response }
         }
     }
 
