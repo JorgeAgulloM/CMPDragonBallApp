@@ -17,6 +17,9 @@
 		CF183DF52CE29F3D00F335C0 /* KMPObservableViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = CF183DF42CE29F3D00F335C0 /* KMPObservableViewModelCore */; };
 		CF183DF72CE29F3D00F335C0 /* KMPObservableViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CF183DF62CE29F3D00F335C0 /* KMPObservableViewModelSwiftUI */; };
 		CF183DF92CE2A3B200F335C0 /* KMPObservableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF183DF82CE2A3B100F335C0 /* KMPObservableViewModel.swift */; };
+		CFEBF66A2CE3E03700C30B1B /* CharacterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF6692CE3E03700C30B1B /* CharacterItem.swift */; };
+		CFEBF66C2CE3E2A100C30B1B /* DiamondShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF66B2CE3E2A000C30B1B /* DiamondShape.swift */; };
+		CFEBF66F2CE3E71400C30B1B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CFEBF66E2CE3E71400C30B1B /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,8 @@
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CF183DEC2CE29DA100F335C0 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		CF183DF82CE2A3B100F335C0 /* KMPObservableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMPObservableViewModel.swift; sourceTree = "<group>"; };
+		CFEBF6692CE3E03700C30B1B /* CharacterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItem.swift; sourceTree = "<group>"; };
+		CFEBF66B2CE3E2A000C30B1B /* DiamondShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +45,7 @@
 				CF183DF72CE29F3D00F335C0 /* KMPObservableViewModelSwiftUI in Frameworks */,
 				CF183DF02CE29EF200F335C0 /* KMPNativeCoroutinesAsync in Frameworks */,
 				CF183DF52CE29F3D00F335C0 /* KMPObservableViewModelCore in Frameworks */,
+				CFEBF66F2CE3E71400C30B1B /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				CF183DEC2CE29DA100F335C0 /* HomeScreen.swift */,
+				CFEBF6692CE3E03700C30B1B /* CharacterItem.swift */,
+				CFEBF66B2CE3E2A000C30B1B /* DiamondShape.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 				CF183DF12CE29EF200F335C0 /* KMPNativeCoroutinesCore */,
 				CF183DF42CE29F3D00F335C0 /* KMPObservableViewModelCore */,
 				CF183DF62CE29F3D00F335C0 /* KMPObservableViewModelSwiftUI */,
+				CFEBF66E2CE3E71400C30B1B /* Kingfisher */,
 			);
 			productName = iosApp;
 			productReference = 7555FF7B242A565900829871 /* DragonBallApp.app */;
@@ -164,6 +173,7 @@
 			packageReferences = (
 				CF183DEE2CE29EF200F335C0 /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */,
 				CF183DF32CE29F3D00F335C0 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */,
+				CFEBF66D2CE3E71400C30B1B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
@@ -212,7 +222,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFEBF66C2CE3E2A100C30B1B /* DiamondShape.swift in Sources */,
 				CF183DF92CE2A3B200F335C0 /* KMPObservableViewModel.swift in Sources */,
+				CFEBF66A2CE3E03700C30B1B /* CharacterItem.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				CF183DED2CE29DA100F335C0 /* HomeScreen.swift in Sources */,
@@ -275,7 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -332,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -356,7 +368,7 @@
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,7 +395,7 @@
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,6 +448,14 @@
 				version = "1.0.0-BETA-5";
 			};
 		};
+		CFEBF66D2CE3E71400C30B1B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -458,6 +478,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CF183DF32CE29F3D00F335C0 /* XCRemoteSwiftPackageReference "KMP-ObservableViewModel" */;
 			productName = KMPObservableViewModelSwiftUI;
+		};
+		CFEBF66E2CE3E71400C30B1B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFEBF66D2CE3E71400C30B1B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
