@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.kotlinxSerialization)
 }
 
 kotlin {
@@ -26,6 +27,13 @@ kotlin {
 
             // Ktor
             implementation(libs.ktor.client.okhttp)
+
+            // Coil
+            implementation(libs.image.coil)
+
+            // Navigation
+            implementation(libs.android.compose.navigation)
+            implementation(libs.jetbrains.serialization)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
