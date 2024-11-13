@@ -1,5 +1,6 @@
 package com.example.dragonballapp.data.remote.response
 
+import com.example.dragonballapp.domain.model.CharacterDetailModel
 import com.example.dragonballapp.domain.model.CharacterModel
 import kotlinx.serialization.Serializable
 
@@ -24,4 +25,14 @@ data class CharacterResponse(
         description = description,
         image = image
     )
+
+    fun toDetailDomain(): CharacterDetailModel? {
+        if (originPlanet == null) return null
+
+        return CharacterDetailModel(
+            characterModel = toDomain(),
+            originPlanet = originPlanet.toDomain(),
+            transformations = transformations.map { it.toDomain() }
+        )
+    }
 }
