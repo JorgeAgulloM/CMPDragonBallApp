@@ -23,7 +23,7 @@ class DetailViewModel(private val id: Int, private val repository: Repository) :
             val response = withContext(Dispatchers.IO) {
                 repository.getDetailCharacter(id)
             }
-            response?.let { _character.update { it } }
+            response?.let { character -> _character.update { character } }
         }
     }
 

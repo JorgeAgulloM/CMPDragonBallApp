@@ -1,7 +1,6 @@
 package com.example.dragonballapp.core.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -10,7 +9,7 @@ import com.example.dragonballapp.ui.detail.DetailScreen
 import com.example.dragonballapp.ui.home.HomeScreen
 
 @Composable
-fun NavigationWrapper(modifier: Modifier = Modifier) {
+fun NavigationWrapper() {
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = Home) {
@@ -22,7 +21,9 @@ fun NavigationWrapper(modifier: Modifier = Modifier) {
         composable<Detail> { navBackStackEntry ->
             val detail = navBackStackEntry.toRoute<Detail>()
             val id = detail.id
-            DetailScreen(id = id)
+            DetailScreen(id = id) {
+                navController.popBackStack()
+            }
         }
     }
 }
