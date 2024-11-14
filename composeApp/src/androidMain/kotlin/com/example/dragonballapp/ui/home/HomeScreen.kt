@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -31,7 +30,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -39,12 +37,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import coil.compose.AsyncImage
 import com.example.dragonballapp.R
 import com.example.dragonballapp.domain.model.CharacterModel
 import com.example.dragonballapp.resources.BackGroundPrimary
 import com.example.dragonballapp.resources.Orange
 import com.example.dragonballapp.resources.White
+import com.example.dragonballapp.ui.componentes.CharacterImage
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -93,7 +91,7 @@ fun CharacterItem(character: CharacterModel, onItemClicked: (Int) -> Unit) {
             ) {
                 Column(
                     modifier = Modifier.padding(16.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
+                    horizontalAlignment = Alignment.Start
                 ) {
                     Text(text = character.name, fontWeight = FontWeight.Bold, fontSize = 22.sp)
                     Text(text = character.race, fontSize = 20.sp, fontStyle = FontStyle.Italic)
@@ -101,22 +99,7 @@ fun CharacterItem(character: CharacterModel, onItemClicked: (Int) -> Unit) {
             }
         }
         DragonBallShape()
-        AsyncImage(
-            model = character.image,
-            contentDescription = "Image of ${character.name}",
-            modifier = Modifier
-                .size(190.dp)
-                .padding(top = 16.dp)
-                .offset((3).dp, (2).dp),
-            colorFilter = ColorFilter.tint(Color.Black.copy(alpha = 0.6f))
-        )
-        AsyncImage(
-            model = character.image,
-            contentDescription = "Image of ${character.name}",
-            modifier = Modifier
-                .size(190.dp)
-                .padding(top = 16.dp)
-        )
+        CharacterImage(characterImage =  character.image, characterName = character.name)
     }
 }
 
