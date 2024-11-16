@@ -17,6 +17,10 @@
 		CF183DF52CE29F3D00F335C0 /* KMPObservableViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = CF183DF42CE29F3D00F335C0 /* KMPObservableViewModelCore */; };
 		CF183DF72CE29F3D00F335C0 /* KMPObservableViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CF183DF62CE29F3D00F335C0 /* KMPObservableViewModelSwiftUI */; };
 		CF183DF92CE2A3B200F335C0 /* KMPObservableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF183DF82CE2A3B100F335C0 /* KMPObservableViewModel.swift */; };
+		CF244B152CE8BECF00303B59 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF244B142CE8BECF00303B59 /* DetailScreen.swift */; };
+		CF244B172CE8C88300303B59 /* LabelInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF244B162CE8C88300303B59 /* LabelInformation.swift */; };
+		CF244B192CE8D9AA00303B59 /* IconInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF244B182CE8D9AA00303B59 /* IconInformation.swift */; };
+		CF244B1B2CE8DFCA00303B59 /* TransformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF244B1A2CE8DFCA00303B59 /* TransformationView.swift */; };
 		CFEBF66A2CE3E03700C30B1B /* CharacterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF6692CE3E03700C30B1B /* CharacterItem.swift */; };
 		CFEBF66C2CE3E2A100C30B1B /* DiamondShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEBF66B2CE3E2A000C30B1B /* DiamondShape.swift */; };
 		CFEBF66F2CE3E71400C30B1B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CFEBF66E2CE3E71400C30B1B /* Kingfisher */; };
@@ -32,6 +36,10 @@
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		CF183DEC2CE29DA100F335C0 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		CF183DF82CE2A3B100F335C0 /* KMPObservableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMPObservableViewModel.swift; sourceTree = "<group>"; };
+		CF244B142CE8BECF00303B59 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		CF244B162CE8C88300303B59 /* LabelInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInformation.swift; sourceTree = "<group>"; };
+		CF244B182CE8D9AA00303B59 /* IconInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconInformation.swift; sourceTree = "<group>"; };
+		CF244B1A2CE8DFCA00303B59 /* TransformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationView.swift; sourceTree = "<group>"; };
 		CFEBF6692CE3E03700C30B1B /* CharacterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItem.swift; sourceTree = "<group>"; };
 		CFEBF66B2CE3E2A000C30B1B /* DiamondShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +96,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				CF244B132CE8BEB300303B59 /* Detail */,
 				CF183DEB2CE29D8600F335C0 /* Home */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
@@ -115,6 +124,17 @@
 				CFEBF66B2CE3E2A000C30B1B /* DiamondShape.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		CF244B132CE8BEB300303B59 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CF244B142CE8BECF00303B59 /* DetailScreen.swift */,
+				CF244B1A2CE8DFCA00303B59 /* TransformationView.swift */,
+				CF244B162CE8C88300303B59 /* LabelInformation.swift */,
+				CF244B182CE8D9AA00303B59 /* IconInformation.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +244,14 @@
 			files = (
 				CFEBF66C2CE3E2A100C30B1B /* DiamondShape.swift in Sources */,
 				CF183DF92CE2A3B200F335C0 /* KMPObservableViewModel.swift in Sources */,
+				CF244B192CE8D9AA00303B59 /* IconInformation.swift in Sources */,
 				CFEBF66A2CE3E03700C30B1B /* CharacterItem.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				CF244B152CE8BECF00303B59 /* DetailScreen.swift in Sources */,
+				CF244B1B2CE8DFCA00303B59 /* TransformationView.swift in Sources */,
 				CF183DED2CE29DA100F335C0 /* HomeScreen.swift in Sources */,
+				CF244B172CE8C88300303B59 /* LabelInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
